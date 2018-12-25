@@ -1,0 +1,38 @@
+  <app-status-bar [ProcessCountComplete]="countCompletePer" [ProcessCountPending]="countPendingPer"
+                  [ProcessCountRunning]="countRunningPer"   [ProcessCountFailed]="countFailedPer"
+                  [ProcessCountCritical]="countCriticalPer" [ProcessCountInfo]="countInfoPer"
+                  [ProcessCountWarning]="countWarningPer"   [ProcessCountAlert]="countAlertPer"
+                  [CountAlert]="countAlert"                 [CountInfo]="countInfo"
+                  [CountWarning]="countWarning"             [CountCritical]="countCritical"
+                  [CountComplete]="countComplete"           [CountFailed]="countFailed"
+                  [CountPending]="countPending"             [CountRunning]="countRunning">
+ </app-status-bar>
+
+
+  <div class="row">
+    <div  class="col-sm-8" >
+       <table class="table table-hover">
+        <thead>
+          <tr class="tableheader">
+            <th>Process_Name</th>
+            <th>Process_Status</th>
+            <th>Process_StartDate</th>
+            <th>Process_State</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let process of processList" (click)="updateSelectedProcess(process)">
+            <td>{{process.name}}</td>
+            <td><ul><li class='table-list {{process.status}}'><span class="listText">{{process.status}}</span></li></ul></td>
+            <td>{{process.startDate}}</td>
+            <td><ul><li class="table-list {{process.state}}"><span class="listText">{{process.state}}</span></li></ul></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-sm-4">
+
+   <app-data-details [currSelProcess]="selectedProcess"> </app-data-details>
+   
+     </div>
+  </div>
