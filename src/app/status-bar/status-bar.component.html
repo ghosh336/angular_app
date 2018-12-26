@@ -1,93 +1,50 @@
 <div class="row">
 
-   <div class="col-sm-1" style='margin-right:-45px'>
+   <div class="col-sm-1" style='margin-right:0px;padding-right:0px;text-align:right'>
      Status :
    </div>
-   <div class="col-sm-4">
+   <div class="col-sm-4" style='margin-left:0px;padding-left:0px;text-align:left'>
      <div class='progress'>
         <div class="progress-bar progress-bar-danger" role="progressbar" [style.width]="ProcessCountFailed + '%'">{{CountFailed}}</div>
         <div class="progress-bar progress-bar-success" role="progressbar" [style.width]="ProcessCountComplete + '%'">{{CountComplete}}</div>
         <div class="progress-bar progress-bar-warning"    role="progressbar" [style.width]="ProcessCountPending + '%'">{{CountPending}}</div>
         <div class="progress-bar progress-bar-info"    role="progressbar" [style.width]="ProcessCountRunning + '%'">{{CountRunning}}</div>
      </div>
+     <div>
+         <ul class="status-bar-ul">
+            <li class="status-bar-li Complete"><span class="progress-bar-text">Complete</span></li>
+            <li class="status-bar-li Running"><span class="progress-bar-text">Running</span></li>
+            <li class="status-bar-li Failed"><span class="progress-bar-text">Failed</span></li>
+            <li class="status-bar-li Pending"><span class="progress-bar-text">Pending</span></li>
+         </ul>
+      </div>
    </div>
 
-   <div class="col-sm-2">
+   <div class="col-sm-1">
 
    </div>
 
-   <div class="col-sm-1" style='margin-right:-32px'>
+   <div class="col-sm-1" style='margin-right:0px;padding-right:0px;text-align:right;'>
      Progress:
    </div>
-   <div class="col-sm-4">
+   <div class="col-sm-4" style='margin-left:0px;padding-left:0px;text-align:left'>
      <div class='progress'>
         <div class="progress-bar progress-bar-info" role="progressbar" [style.width]="ProcessCountInfo + '%'">{{CountInfo}}</div>
         <div class="progress-bar progress-bar-danger" role="progressbar" [style.width]="ProcessCountCritical + '%'">{{CountCritical}}</div>
         <div class="progress-bar progress-bar-warning"    role="progressbar" [style.width]="ProcessCountWarning + '%'">{{CountWarning}}</div>
         <div class="progress-bar progress-bar-alert"    role="progressbar" [style.width]="ProcessCountAlert + '%'">{{CountAlert}}</div>
      </div>
+     <div>
+       <ul class="status-bar-ul ">
+          <li class="status-bar-li Critical"><span class="progress-bar-text">Critical</span></li>
+          <li class="status-bar-li Info"><span class="progress-bar-text">Info</span></li>
+          <li class="status-bar-li Warning"><span class="progress-bar-text">Warning</span></li>
+          <li class="status-bar-li Alert"><span class="progress-bar-text">Alert</span></li>
+       </ul>
+     </div>
    </div>
 
-</div>
+   <div class="col-sm-1">
 
-<div class="container">
-<div class="row">
-  <div class="col-sm-1">
-    <ul class="status-bar-ul ">
-       <li class="status-bar-li Complete"><span class="progress-bar-text">Complete</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Running"><span class="progress-bar-text">Running</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Failed"><span class="progress-bar-text">Failed</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Pending"><span class="progress-bar-text">Pending</span></li>
-    </ul>
-  </div>
-
-
-  <div class="col-sm-1">
-
-  </div>
-  <div class="col-sm-1">
-
-  </div>
-  <div class="col-sm-1">
-
-  </div>
-
-
-  <div class="col-sm-1">
-    <ul class="status-bar-ul ">
-       <li class="status-bar-li Critical"><span class="progress-bar-text">Critical</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Info"><span class="progress-bar-text">Info</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Warning"><span class="progress-bar-text">Warning</span></li>
-    </ul>
-  </div>
-  <div class="col-sm-1">
-    <ul class="status-bar-ul">
-       <li class="status-bar-li Alert"><span class="progress-bar-text">Alert</span></li>
-    </ul>
-  </div>
-</div>
-</div>
-
-<div class="row">
-<br><br>
+   </div>
 </div>
